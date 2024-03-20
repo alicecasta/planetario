@@ -23,13 +23,16 @@ namespace planetario
         public double Y { get; set; }
         public override string ToString()
         {
-            return string.Format("{0}, {1}", X, Y);
+            return string.Format("{0}; {1}", X, Y);
         }
         public static Vettore Parse(string s)
         {
-            var l = s.Split(',');
-            return new Vettore(int.Parse(l[0]), int.Parse(l[1])) ;
+            var l = s.Split(';');
+            return new Vettore(int.Parse(l[0]), int.Parse(l[1]));
         }
+
+        
+
         public static Vettore operator +(Vettore v1, Vettore v2)
         {
             Vettore v = new Vettore(v1.X + v2.X, v1.Y + v2.Y);
@@ -77,16 +80,16 @@ namespace planetario
         }
         public double modulo()
         {
-            return Math.Sqrt((X*X)+ (Y *Y));
+            return Math.Sqrt((X * X) + (Y * Y));
         }
         public static double distanza(Vettore v1, Vettore v2)
         {
             return Math.Sqrt(Math.Pow((v1.X - v2.X), 2) + Math.Pow((v1.Y - v2.Y), 2));
         }
-        public  Vettore  versore(Vettore v)
+        public Vettore versore()
         {
-            double m=v.modulo();
-            return new Vettore( v.X/m, (v.Y/m));
-        }   
+            double m = this.modulo();
+            return new Vettore(X / m, Y / m);
+        }
     }
 }
