@@ -13,8 +13,9 @@ namespace planetario
         }
 
         
-        public Pianeta(float massa, Vettore posizione, Vettore velocita,float raggio)
+        public Pianeta( string nome,Vettore posizione, Vettore velocita,float raggio, float massa)
         {
+            Nome = nome;    
             Massa = massa;
             Posizione = posizione;
             Velocita = velocita;
@@ -26,6 +27,7 @@ namespace planetario
         public Vettore Posizione { get; set; }//rispetto all'origine
         public Vettore Velocita { get; set; }
         public Vettore Accelerazione { get; set; }
+        public string Nome { get; set; }
         
         public float Raggio { get; set; }   
         internal void forzag(Pianeta p2)
@@ -35,7 +37,7 @@ namespace planetario
         // public Vettore ForzaG { get; set; }// forza gravitazionale
         public override string ToString()
         {
-            return string.Format;
+            return string.Format("{0}:({1}, {2}, {3}, {4})", Nome, Posizione, Velocita, Raggio, Massa);
         }
 
     }

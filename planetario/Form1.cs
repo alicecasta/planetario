@@ -35,11 +35,16 @@ namespace planetario
             Vettore Posizione = Vettore.Parse(textBox1.Text);
             Vettore Velocita = Vettore.Parse(textBox2.Text);
             float Massa=float.Parse(textBox3.Text);
-            float Raggio=float.Parse(textBox5.Text);    
-            Pianeta R = new Pianeta(Massa, Velocita, Posizione, Raggio);
+            float Raggio=float.Parse(textBox5.Text); 
+            string Nome=textBox4.Text;
+            Pianeta R = new Pianeta(Nome, Posizione,Velocita, Raggio,Massa);
             listBox1.Items.Add(R);
-          
-            
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+
 
         }
 
@@ -73,7 +78,8 @@ namespace planetario
             label6.Visible=false;
             button3.Visible=false;
             listBox1.Visible=false;
-
+            BackColor = Color.Blue;
+           
 
         }
 
@@ -81,10 +87,48 @@ namespace planetario
         {
             Refresh();
             DisegnaPianeti();
-            planetario.Move();
-            
 
+            for (int i = 0; i < 1000; i++)
+            {
+                planetario.Move();
+            }
+            DisegnaStelline();
 
+        }
+
+        private void DisegnaStelline()
+        {
+            Graphics g = this.CreateGraphics();
+            g.FillEllipse(Brushes.Yellow, 300, 200, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 600, 500, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 100, 100, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 50, 60, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 800, 200, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 100, 200, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 650, 100, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 460, 200, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 689, 432, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 100, 600, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 200, 400, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 600, 300, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 400, 500, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 400, 60, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 340, 480, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 100, 360, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 230, 560, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 260, 200, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 489, 992, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 400, 600, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 100, 100, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 300, 70, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 150, 500, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 200, 60, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 600, 100, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 300, 470, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 170, 100, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 860, 500, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 140, 102, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 200, 300, 5, 5);
         }
 
         private void DisegnaPianeti()
@@ -93,7 +137,7 @@ namespace planetario
             foreach (Pianeta p in planetario.Pianeti)
             {
                
-                g.FillEllipse(Brushes.Black, (float)(((p.Posizione.X))/1e2), (float)(((p.Posizione.Y))/1e2), p.Raggio, p.Raggio);//raggio
+                g.FillEllipse(Brushes.Black, (float)(p.Posizione.X), (float)(p.Posizione.Y), p.Raggio, p.Raggio);//raggio
             }
 
 
