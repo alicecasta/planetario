@@ -78,7 +78,7 @@ namespace planetario
             label6.Visible=false;
             button3.Visible=false;
             listBox1.Visible=false;
-            BackColor = Color.Blue;
+            BackColor = Color.DarkBlue;
            
 
         }
@@ -112,23 +112,47 @@ namespace planetario
             g.FillEllipse(Brushes.Yellow, 200, 400, 5, 5);
             g.FillEllipse(Brushes.Yellow, 600, 300, 5, 5);
             g.FillEllipse(Brushes.Yellow, 400, 500, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 400, 60, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 340, 480, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 280, 460, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1340, 480, 5, 5);
             g.FillEllipse(Brushes.Yellow, 100, 360, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 230, 560, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1230, 560, 5, 5);
             g.FillEllipse(Brushes.Yellow, 260, 200, 5, 5);
             g.FillEllipse(Brushes.Yellow, 489, 992, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 400, 600, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1200, 600, 5, 5);
             g.FillEllipse(Brushes.Yellow, 100, 100, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 300, 70, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 150, 500, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 200, 60, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 600, 100, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 300, 470, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 170, 100, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 860, 500, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 300, 200, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 950, 500, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 200, 400, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1000,650, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1300, 200, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 170,300, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1560, 500, 5, 5);
             g.FillEllipse(Brushes.Yellow, 140, 102, 5, 5);
             g.FillEllipse(Brushes.Yellow, 200, 300, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1400, 650, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1240, 120, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1470, 500, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1560, 400, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1220, 102, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1407, 380, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 980, 650, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 670, 400, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 700, 460, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 560, 500, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 760, 476, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 600, 700, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 600, 750, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 540,670, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 670, 650, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 4700, 720, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 340, 592, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 660, 800, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1000, 350, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1100, 320, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1170, 300, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1070, 290, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1101, 400, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1080, 390, 5, 5);
         }
 
         private void DisegnaPianeti()
