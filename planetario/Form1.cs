@@ -78,9 +78,8 @@ namespace planetario
             label6.Visible=false;
             button3.Visible=false;
             listBox1.Visible=false;
-            BackColor = Color.DarkBlue;
-           
-
+            BackColor = Color.MidnightBlue;
+          
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -123,9 +122,9 @@ namespace planetario
             g.FillEllipse(Brushes.Yellow, 300, 200, 5, 5);
             g.FillEllipse(Brushes.Yellow, 950, 500, 5, 5);
             g.FillEllipse(Brushes.Yellow, 200, 400, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 1000,650, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1000, 650, 5, 5);
             g.FillEllipse(Brushes.Yellow, 1300, 200, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 170,300, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 170, 300, 5, 5);
             g.FillEllipse(Brushes.Yellow, 1560, 500, 5, 5);
             g.FillEllipse(Brushes.Yellow, 140, 102, 5, 5);
             g.FillEllipse(Brushes.Yellow, 200, 300, 5, 5);
@@ -142,7 +141,7 @@ namespace planetario
             g.FillEllipse(Brushes.Yellow, 760, 476, 5, 5);
             g.FillEllipse(Brushes.Yellow, 600, 700, 5, 5);
             g.FillEllipse(Brushes.Yellow, 600, 750, 5, 5);
-            g.FillEllipse(Brushes.Yellow, 540,670, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 540, 670, 5, 5);
             g.FillEllipse(Brushes.Yellow, 670, 650, 5, 5);
             g.FillEllipse(Brushes.Yellow, 4700, 720, 5, 5);
             g.FillEllipse(Brushes.Yellow, 340, 592, 5, 5);
@@ -153,15 +152,18 @@ namespace planetario
             g.FillEllipse(Brushes.Yellow, 1070, 290, 5, 5);
             g.FillEllipse(Brushes.Yellow, 1101, 400, 5, 5);
             g.FillEllipse(Brushes.Yellow, 1080, 390, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1300, 700, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1270, 790, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1401, 800, 5, 5);
+            g.FillEllipse(Brushes.Yellow, 1480, 690, 5, 5);
         }
-
         private void DisegnaPianeti()
         {
             Graphics g=this.CreateGraphics();
             foreach (Pianeta p in planetario.Pianeti)
             {
                
-                g.FillEllipse(Brushes.Black, (float)(p.Posizione.X), (float)(p.Posizione.Y), p.Raggio, p.Raggio);//raggio
+                g.FillEllipse(Brushes.Black, (float)(p.Posizione.X), (float)(Height -p.Posizione.Y), p.Raggio, p.Raggio);//raggio
             }
 
 

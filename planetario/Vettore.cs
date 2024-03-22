@@ -28,7 +28,7 @@ namespace planetario
         public static Vettore Parse(string s)
         {
             var l = s.Split(';');
-            return new Vettore(int.Parse(l[0]), int.Parse(l[1]));
+            return new Vettore(double.Parse(l[0]), double.Parse(l[1]));
         }
 
         

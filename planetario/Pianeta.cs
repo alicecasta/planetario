@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,12 +30,9 @@ namespace planetario
         public Vettore Accelerazione { get; set; }
         public string Nome { get; set; }
         
-        public float Raggio { get; set; }   
-        internal void forzag(Pianeta p2)
-        {
-            throw new NotImplementedException();
-        }
-        // public Vettore ForzaG { get; set; }// forza gravitazionale
+        public float Raggio { get; set; }  
+        public Vettore forzag {  get; set; }    
+       
         public override string ToString()
         {
             return string.Format("{0}:({1}, {2}, {3}, {4})", Nome, Posizione, Velocita, Raggio, Massa);
